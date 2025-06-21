@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rohit Goyal - Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f9fafb, #e0e7ff);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    nav {
+      background-color: #4f46e5;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .profile-picture {
+  display: block;
+  margin: 40px auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-picture:hover {
+  transform: scale(1.05);
+}
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #c7d2fe;
+    }
+
+    header {
+      text-align: center;
+      margin: 40px 20px 20px 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: #4f46e5;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #4f46e5;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    p, li {
+      font-size: 18px;
+    }
+
+    section {
+      margin: 40px 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card {
+      background-color: white;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .resume-section {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .resume-button {
+      background-color: #4f46e5;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .resume-button:hover {
+      background-color: #3730a3;
+    }
+
+    .contact-buttons a {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      padding: 12px 20px;
+      background-color: #4f46e5;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .contact-buttons a:hover {
+      background-color: #3730a3;
+    }
+
+    footer {
+      text-align: center;
+      color: #6b7280;
+      margin: 40px 0 20px 0;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="#about" onclick="showSection('about')">About</a>
+    <a href="#skills" onclick="showSection('skills')">Skills</a>
+    <a href="#projects" onclick="showSection('projects')">Projects</a>
+    <a href="#contact" onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Rohit Goyal</h1>
+    <p>Aspiring Software Engineer | Machine Learning Enthusiast | IIT Bombay</p>
+    <img class="profile-picture" src="profile.jpg" alt="Rohit Goyal">
+
+    
+  </header>
+
+  <div class="resume-section">
+    <a class="resume-button" href="resume.pdf" target="_blank">View Resume</a>
+    <a class="resume-button" href="resume.pdf" download>Download Resume</a>
+  </div>
+
+  <section id="about">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>I am a Final-year B.Tech Civil Engineering student at IIT Bombay, currently preparing for SDE and Machine Learning Engineer roles. I am passionate about problem solving, software development, and building impactful projects.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="hidden">
+    <div class="card">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li>Data Structures & Algorithms (C++)</li>
+        <li>Machine Learning & Deep Learning</li>
+        <li>Python, Django, FastAPI</li>
+        <li>React, HTML, CSS, JavaScript</li>
+        <li>SQL, MongoDB</li>
+        <li>Linux, Git, MLOps Basics</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="hidden">
+    <h2>Projects</h2>
+    <div class="card">
+      <h3>15 Puzzle Game</h3>
+      <p>Developed using React during ITC Summer of Code. Implemented core game logic and responsive UI.</p>
+    </div>
+    <div class="card">
+      <h3>Task Visualization & Flowchart Automation</h3>
+      <p>Internship project at Blue Flame Consulting for pharmaceutical process optimization using Python and visualization tools.</p>
+    </div>
+    <div class="card">
+      <h3>Google OAuth Integration</h3>
+      <p>Implemented Google login using OAuth in Django, enhancing security and user experience for web applications.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="hidden">
+    <div class="card">
+      <h2>Contact</h2>
+      <div class="contact-buttons">
+        <a href="mailto:rohit22goyal9876@gmail.com" target="_blank">Email Me</a>
+        <a href="https://www.linkedin.com/in/rohit-goyal-a83834257/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Rxshh01" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Rohit Goyal. All rights reserved.
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        if (section.id === sectionId) {
+          section.classList.remove('hidden');
+        } else {
+          section.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
